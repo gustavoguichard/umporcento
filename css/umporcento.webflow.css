@@ -1,0 +1,216 @@
+body {
+  padding-top: 54px;
+  font-family:'Amatic SC', sans-serif;
+  color: black;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 6em;
+  line-height: 140px;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: block;
+  width: 330px;
+  margin-right: auto;
+  margin-bottom: 17px;
+  margin-left: auto;
+  padding: 17px 15px;
+  background-color: #12d6dd;
+  font-family:'Amatic SC', sans-serif;
+  color: black;
+  font-size: 44px;
+  text-align: center;
+  text-decoration: none;
+}
+.section {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.highlight {
+  color: #12d6dd;
+}
+.highlight._14-minutes-call-2 {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 1px;
+  font-size: 2em;
+  font-weight: 700;
+}
+.highlight._14-minutes-call-2.preview-highlight {
+  font-size: 2.4em;
+}
+.footer {
+  padding-bottom: 10px;
+  font-family:'News Cycle', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer-link {
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  color: #f5efdd;
+  text-decoration: none;
+}
+.footer-link:hover {
+  box-shadow: #12d6dd 0px 4px 0px 0px;
+  color: #12d6dd;
+}
+.footer-link.preview-footer-link {
+  padding-right: 10px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  font-size: 13px;
+}
+._14-minutes-heading {
+  width: 42%;
+  float: left;
+  clear: none;
+  font-size: 5em;
+}
+._14-minutes-heading.preview-heading {
+  width: 39%;
+  color: white;
+}
+._14-minutes-image {
+  width: 22%;
+  height: 100%;
+  float: left;
+}
+._14-minutes-call {
+  color: #f5efdd;
+  font-size: 1.5em;
+}
+._14-minutes-call.preview-call {
+  margin-top: 29px;
+  font-size: 1.7em;
+}
+.preview {
+  background-image: url('../images/dark_bg.gif');
+}
+.preview-paragraph {
+  margin-bottom: 23px;
+  color: #f5efdd;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+html.w-mod-js.w-mod-no-ios *[data-ix="14-minutes"] {
+  opacity: 0;
+  -webkit-transform: scale(0.77) translate(-70em, 0px);
+  -ms-transform: scale(0.77) translate(-70em, 0px);
+  -o-transform: scale(0.77) translate(-70em, 0px);
+  transform: scale(0.77) translate(-70em, 0px);
+}
+html.w-mod-js.w-mod-no-ios *[data-ix="14-minutes-2"] {
+  opacity: 0;
+  -webkit-transform: scale(0.77) translate(70em, 0px);
+  -ms-transform: scale(0.77) translate(70em, 0px);
+  -o-transform: scale(0.77) translate(70em, 0px);
+  transform: scale(0.77) translate(70em, 0px);
+}
+html.w-mod-js.w-mod-no-ios *[data-ix="clock"] {
+  opacity: 0.01;
+  -webkit-transform: scale(0.66) rotate(-600deg);
+  -ms-transform: scale(0.66) rotate(-600deg);
+  -o-transform: scale(0.66) rotate(-600deg);
+  transform: scale(0.66) rotate(-600deg);
+}
+html.w-mod-js.w-mod-no-ios *[data-ix="fly-up"] {
+  opacity: 0;
+  -webkit-transform: scale(0.78) translate(0px, 6em);
+  -ms-transform: scale(0.78) translate(0px, 6em);
+  -o-transform: scale(0.78) translate(0px, 6em);
+  transform: scale(0.78) translate(0px, 6em);
+}
+@media (max-width: 991px) {
+  ._14-minutes-heading.preview-heading {
+    font-size: 4em;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  .gray-section.section {
+    padding: 50px 10px;
+  }
+  .big-quote {
+    background-image: none;
+    background-position: 0% 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+  }
+  ._14-minutes-heading {
+    line-height: 1em;
+  }
+}
+@media (max-width: 479px) {
+  .button {
+    width: 280px;
+  }
+  .logo.w--current {
+    max-width: 75px;
+  }
+  .footer-link.preview-footer-link {
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 12px;
+  }
+}
+
