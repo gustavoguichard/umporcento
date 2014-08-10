@@ -2,14 +2,14 @@
   position: fixed
   transition: all .3s
   left: -320px
-  @media (max-width: 380px)
-    left: -85%
   z-index: 1000
   background: black
   height: 100%
   max-width: 85%
   .menu-active &, &:target
     left: 0
+  @media (max-width: 380px)
+    left: -85%
 
 .main-menu-content
   width: 320px
@@ -101,6 +101,9 @@
   position: absolute
   top: 20px
   right: -230px
+
+  .logo img
+    max-width: 100%
   
   .logo, .menu-toggl
     float: left
@@ -146,6 +149,14 @@
         transform: rotate(-90deg) translate(14px, 0)
       &:before
         transform: translate(0, 14px)
+
+  @media (max-width: 580px)
+    right: -180px
+    .logo, .menu-toggl
+      width: 80px
+      height: 80px
+      .menu-hamburguer
+        top: 35px !important
 
 #construction-alert
   position: fixed
