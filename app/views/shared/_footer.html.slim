@@ -1,2 +1,15 @@
-.container-fluid
-  h3 Umporcento
+footer.dark-bg#footer
+  .container
+    .row
+      .col-md-3.contact-mail
+        = mail_to "contato@umporcento.org"
+      .col-md-9.copyright
+        small
+          | ©
+          = Time.now().year
+          |  UMPORCENTO · Designed by 
+          = link_to "Diego Polly", "http://www.bohlam.com.br/", target: :blank
+          |  and Built by 
+          = link_to "Gustavo Guichard", "http://gustavoguichard.com", target: :blank
+          |  · 
+          = link_to "Open Source", "https://github.com/gustavoguichard/umporcento", target: :blank

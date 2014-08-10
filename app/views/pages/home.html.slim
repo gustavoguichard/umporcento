@@ -1,17 +1,7 @@
-.home-slider.cycle-slideshow data-cycle-fx="fadeout" data-cycle-timeout="5000" data-cycle-slides=".slide" data-cycle-speed="800"
-  .slide
-    h4.slider-caption.caption-1 Você já se dedicou
-    h4.slider-caption.caption-2 a uma causa nobre?
-    .slider-bg-img style="background-image: url(#{image_path("slides/slide-1.jpg")});"
-  .slide
-    h4.slider-caption.caption-1 Que você abraçou
-    h4.slider-caption.caption-2 alguém de verdade?
-    .slider-bg-img style="background-image: url(#{image_path("slides/slide-2.jpg")});"
-  .slide
-    h4.slider-caption.caption-1 Que você andou
-    h4.slider-caption.caption-2 de bicicleta?
-    .slider-bg-img style="background-image: url(#{image_path("slides/slide-3.jpg")});"
-  .slide
-    h4.slider-caption.caption-1 Que você brincou
-    h4.slider-caption.caption-2 com seus filhos?
-    .slider-bg-img style="background-image: url(#{image_path("slides/slide-4.jpg")});"
+.home-slider.cycle-slideshow data-cycle-fx="fadeout" data-cycle-timeout="5000" data-cycle-slides=".slide" data-cycle-speed="800" data-cycle-pager-template="<li class=slider-pager-item><a href=#>{{cycleTitle}}</a></li>"
+  - @slides.each do |slide|
+    .slide data-cycle-title="#{slide[:title]}"
+      h4.slider-caption.caption-1= slide[:caption_1]
+      h4.slider-caption.caption-2== slide[:caption_2]
+      .slider-bg-img style="background-image: url(#{image_path(slide[:url])});"
+  ul.cycle-pager

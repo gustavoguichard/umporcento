@@ -22,7 +22,7 @@
     position: relative
 
   .menu-toggl
-    background: $cyan
+    background: $brand-primary
     cursor: pointer
 
     .menu-hamburguer
@@ -52,3 +52,10 @@
         bottom: -8px
         +context(".menu-active")
           transform: rotate(-45deg) translate(10px, -10px)
+
+    body:not(.menu-active) &:hover .menu-hamburguer
+      background: transparent
+      &:after
+        transform: rotate(-90deg) translate(14px, 0)
+      &:before
+        transform: translate(0, 14px)

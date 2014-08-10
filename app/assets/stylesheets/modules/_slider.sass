@@ -2,6 +2,7 @@
   width: 100%
   height: 740px
   font-family: 'Amatic SC', cursive
+  font-size: 24px
   overflow: hidden
   .slide, .slider-bg-img
     width: 100%
@@ -31,3 +32,44 @@
   .cycle-slide-active
     .slider-caption
       transform: translate(0, 0)
+
+  .cycle-pager
+    position: absolute
+    bottom: 20px
+    left: 10px
+    z-index: 110
+    list-style: none
+    line-height: 1.2em
+    font-weight: bold
+    a
+      color: transparent
+      &:hover
+        text-decoration: none
+  .slider-pager-item
+    position: relative
+    &:before, &:after, a
+      transition: all .5s
+    &:before, &:after
+      content: ""
+      display: block
+      border-radius: 50%
+      position: absolute
+    &:after
+      width: 8px
+      height: 8px
+      top: 10px
+      left: -20px
+      background: white
+    &:before
+      border: 2px solid transparent
+      width: 22px
+      height: 22px
+      left: -27px
+      top: 3px
+    &:hover, &.cycle-pager-active
+      &:after
+        background: transparent
+      &:before
+        border-color: white
+      a
+        color: white

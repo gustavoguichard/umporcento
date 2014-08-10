@@ -1,20 +1,35 @@
 ################################################################################
 # VIEWS
 ################################################################################
+# Everything related to Window, Document and Body listeners and triggers
 class UmPorCento.Views.WindowControl extends Backbone.View
   el: window
   events:
     'resize': 'resizedWindow'
   initialize: ->
-    UmPorCento.EventDispatcher.on 'menu:clicked', @toggleMenu
+    UmPorCento.EventDispatcher.on 'menu:toggle', @toggleMenu
+    document.addEventListener @getVisibilityByBrowser(), @changedVisibility
     @body = $('body')
     @resizedWindow()
+
+  getVisibilityByBrowser: =>
+    if (typeof document.hidden isnt "undefined")
+      return "visibilitychange"
+    else if (typeof document.mozHidden isnt "undefined")
+      return "mozvisibilitychange"
+    else if (typeof document.msHidden isnt "undefined")
+      return "msvisibilitychange"
+    else if (typeof document.webkitHidden isnt "undefined")
+      return "webkitvisibilitychange"
 
   toggleMenu: =>
     @body.toggleClass 'menu-active'
 
   resizedWindow: =>
     UmPorCento.EventDispatcher.trigger 'window:resized', {width: @$el.width(), height: @$el.height()}
+
+  changedVisibility: (e)=>
+    UmPorCento.EventDispatcher.trigger 'window:visibilitychanged', e.target.visibilityState
 
 class UmPorCento.Views.MainMenu extends Backbone.View
   el: '#main-menu'
@@ -23,4 +38,4 @@ class UmPorCento.Views.MainMenu extends Backbone.View
     # UmPorCento.EventDispatcher.on 'window:resized', @windowResized
 
   clickedToggle: (ev)=>
-    UmPorCento.EventDispatcher.trigger 'menu:clicked'
+    UmPorCento.EventDispatcher.trigger 'menu:toggle'

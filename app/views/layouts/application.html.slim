@@ -2,7 +2,8 @@ doctype html
 html.no-js lang="en" 
   head
     meta charset="utf-8" /
-    meta name="viewport" content="width=device-width, initial-scale=1" /
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /
+    meta http-equiv="X-UA-Compatible" content="IE=edge" /
     title= content_for?(:title) ? yield(:title) : "Um Por Cento"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "vendor/modernizr"
@@ -11,8 +12,9 @@ html.no-js lang="en"
     = csrf_meta_tags
   body
     = initjs_tag "UmPorCento"
+    = link_to "Skip to main content", "#content", class: "sr-only sr-only-focusable"
     = render partial: 'shared/menu'
-    .main-content
+    .main-content#main-content
       = yield
       = render partial: 'shared/footer'
     = javascript_include_tag "application"
