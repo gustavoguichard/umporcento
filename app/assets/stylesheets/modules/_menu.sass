@@ -2,10 +2,12 @@
   position: fixed
   transition: all .3s
   left: -320px
+  @media (max-width: 380px)
+    left: -85%
   z-index: 1000
   background: black
   height: 100%
-  max-width: 90%
+  max-width: 85%
   .menu-active &, &:target
     left: 0
 
