@@ -1,9 +1,34 @@
+#construction-alert.alert.alert-warning role="alert"
+  strong Página em construção. 
+  | Pedimos desculpas pelo inconveniente, mas estamos trabalhando nisso ;)
+
 #main-menu
   aside#floating-menu
     .menu-toggl
-      span.menu-hamburguer
+      a.menu-hamburguer href="#main-menu"
     = link_to "/", class: "logo" do
       = image_tag "logo.png"
   
   nav.main-menu-content
-    = image_tag "logo.png"
+    = image_tag "passaro.png", class: "bird-image"
+    ul.menu.call-to-actions
+      li.menu-item= link_to "Quem Somos", "#", data: {construction: true}
+      li.menu-item= link_to "O que fazemos", "#", data: {construction: true}
+      li.menu-item= link_to "Como Ajudar", "#", data: {construction: true}
+    ul.menu.secondary-menu
+      li.menu-item= link_to "Inspirações", "#", data: {construction: true}
+      li.menu-item= link_to "Parceiros", "#", data: {construction: true}
+      li.menu-item= link_to "Notícias", "#", data: {construction: true}
+      li.menu-item= link_to "Loja", "#", data: {construction: true}
+      li.menu-item= link_to "Contato", "#", data: {construction: true}
+    footer.menu-bottom
+      ul.menu.language-menu.list-inline
+        li.menu-item.active= link_to "Por", "#"
+        li.menu-item= link_to "Esp", "#", data: {construction: true}
+        li.menu-item= link_to "Eng", "#", data: {construction: true}
+      ul.menu.social-menu.list-inline
+        li.menu-item= link_to "Blog", "https://medium.com/@umporcento", target: :blank
+        li.menu-item= link_to "Facebook", "https://www.facebook.com/umporcento.org", class: "social-menu-item facebook", target: :blank
+        li.menu-item= link_to "Instagram", "http://instagram.com/UmPorCentoOrg", class: "social-menu-item instagram", target: :blank
+        li.menu-item= link_to "YouTube", "https://www.youtube.com/user/UmPorCentoORG", class: "social-menu-item youtube", target: :blank
+        li.menu-item= link_to "Vimeo", "https://vimeo.com/umporcentoorg", class: "social-menu-item vimeo", target: :blank

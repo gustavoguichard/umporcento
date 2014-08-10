@@ -12,7 +12,7 @@ html.no-js lang="en"
     = csrf_meta_tags
   body
     = initjs_tag "UmPorCento"
-    = link_to "Skip to main content", "#content", class: "sr-only sr-only-focusable"
+    = link_to "Ir ao conteúdo principal", "#content", class: "sr-only sr-only-focusable"
     = render partial: 'shared/menu'
     .main-content#main-content
       = yield

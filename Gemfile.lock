@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ctran/annotate_models.git
-  revision: dafd953d07809bc9bef2c6524da0b1b4cce30a2b
+  revision: 99d899d58415d11f03461c4a91c75005c0e6e4ca
   branch: develop
   specs:
     annotate (2.6.5)
@@ -51,17 +51,16 @@ GEM
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
-    coffee-script (2.2.0)
+    coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.0)
-    compass (0.12.6)
+    coffee-script-source (1.7.1)
+    compass (0.12.7)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.2.19)
-    compass-rails (1.1.7)
+    compass-rails (2.0.0)
       compass (>= 0.12.2)
-      sprockets (<= 2.11.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.2.1)
@@ -70,7 +69,7 @@ GEM
     heroku-deflater (0.4.2)
       rack (>= 1.4.5)
     hike (1.2.3)
-    i18n (0.6.9)
+    i18n (0.6.11)
     initjs (2.1.2)
       jquery-rails
       rails (>= 3.1)
@@ -118,11 +117,11 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    semantic-mixins (0.2.2)
-      compass-rails (>= 1.0.3)
+    semantic-mixins (0.2.3.1)
+      compass-rails (>= 2.0.0)
       rails (>= 3.1)
-      sass (>= 3.2.3)
-      sass-rails (>= 3.2.4)
+      sass (>= 3.2.19)
+      sass-rails (>= 4.0.3)
     slim (2.0.3)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -147,8 +146,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.39)
-    uglifier (2.5.1)
+    tzinfo (0.3.41)
+    uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicorn (4.8.3)
@@ -176,7 +175,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor
   sass-rails
-  semantic-mixins
+  semantic-mixins (~> 0.2.3.1)
   slim
   slim-rails
   uglifier

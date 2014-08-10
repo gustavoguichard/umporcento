@@ -5,10 +5,93 @@
   z-index: 1000
   background: black
   height: 100%
-  +context(".menu-active")
+  .menu-active &, &:target
     left: 0
-  .main-menu-content
-    width: 360px
+
+.main-menu-content
+  width: 360px
+  height: 100%
+  padding: 20px 10px 50px
+  text-align: center
+  text-transform: uppercase
+  overflow: scroll
+  .menu
+    list-style: none
+    font-weight: bolder
+    padding-left: 0
+  a
+    color: white
+    &:hover
+      text-decoration: line-through
+      color: $brand-primary
+  .active a
+    color: $brand-primary
+
+  .call-to-actions
+    margin: 40px
+    position: relative
+    font-family: $font-cursive
+    font-size: 30px
+    &:after, &:before
+      content: ""
+      +image-replace("dotted-row.png")
+      position: absolute
+      left: 50%
+      margin-left: - image-width("dotted-row.png")/2
+    &:before
+      top: -20px
+    &:after
+      bottom: -20px
+    .menu-item a:after
+      content: "?"
+      font-weight: normal
+      font-size: 1.2em
+  
+  .secondary-menu
+    font-size: 18px
+    line-height: 1.8em
+    margin-bottom: 40px
+
+  .menu-bottom
+    +stick-to(bottom, absolute)
+    background-color: black
+    padding-top: 10px
+
+  .language-menu
+    font-size: 12px
+    line-height: 11px
+    margin-bottom: 20px
+    .menu-item:not(:last-child)
+      border-right: 1px solid $brand-primary
+    a
+      position: relative
+      top: -1px
+  
+  .social-menu
+    font-family: $font-cursive
+    font-weight: normal
+    font-size: 18px
+    .menu-item
+      padding: 0 10px
+  
+  .social-menu-item
+    +sprite-replace("facebook-social")
+    display: inline-block
+    vertical-align: top
+    &.instagram
+      +sprites-sprite-position("instagram-social")
+    &.vimeo
+      +sprites-sprite-position("vimeo-social")
+    &.youtube
+      +sprites-sprite-position("youtube-social")
+
+  @media (max-height: 580px)
+    .call-to-actions
+      margin-top: 0
+      &:before
+        display: none
+    .bird-image
+      display: none
 
 #floating-menu
   position: absolute
@@ -59,3 +142,11 @@
         transform: rotate(-90deg) translate(14px, 0)
       &:before
         transform: translate(0, 14px)
+
+#construction-alert
+  position: fixed
+  top: 10px
+  z-index: 9000
+  left: 50%
+  margin-left: -281px
+  display: none

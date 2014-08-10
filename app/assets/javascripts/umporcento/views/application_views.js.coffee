@@ -39,3 +39,13 @@ class UmPorCento.Views.MainMenu extends Backbone.View
 
   clickedToggle: (ev)=>
     UmPorCento.EventDispatcher.trigger 'menu:toggle'
+    false
+
+class UmPorCento.Views.ConstructionAlert extends Backbone.View
+  el: '#construction-alert'
+  initialize: ->
+    $('a[data-construction=true]').on 'click', @displayAlert
+
+  displayAlert: =>
+    @$el.clearQueue().slideDown().delay(4000).fadeOut()
+    false

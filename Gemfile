@@ -17,7 +17,7 @@ gem 'bootstrap-sass'
 gem 'sass-rails'
 gem 'autoprefixer-rails'
 gem 'compass-rails'
-gem 'semantic-mixins'
+gem 'semantic-mixins', '~> 0.2.3.1'
 
 gem 'initjs'
 
