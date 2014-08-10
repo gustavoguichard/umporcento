@@ -1,0 +1,23 @@
+{
+  "name": "Um Por Cento Website",
+  "version": "0.0.1",
+  "authors": [
+    "Gustavo Guichard <gustavoguichard@gmail.com>"
+  ],
+  "description": "Website for 1% organization",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ujs": "~1.0.0",
+    "handlebars": "~1.3.0",
+    "backbone": "~1.1.2",
+    "jquery-cycle2": "~2.1.5"
+  }
+}

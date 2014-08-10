@@ -1,0 +1,54 @@
+#main-menu
+  position: fixed
+  transition: all .3s
+  left: -360px
+  z-index: 1000
+  background: black
+  height: 100%
+  +context(".menu-active")
+    left: 0
+  .main-menu-content
+    width: 360px
+
+#floating-menu
+  position: absolute
+  top: 20px
+  right: -230px
+  
+  .logo, .menu-toggl
+    float: left
+    width: 105px
+    height: 105px
+    position: relative
+
+  .menu-toggl
+    background: $cyan
+    cursor: pointer
+
+    .menu-hamburguer
+      position: absolute
+      top: 50px
+      left: 30%
+      display: block
+      width: 40%
+      height: 6px
+      background: white
+      +context(".menu-active")
+        background: transparent
+      &:after, &:before
+        content: ""
+        display: block
+        background: white
+        height: 100%
+        width: 100%
+        position: relative
+        transition: all .3s
+        transform-origin: 50% 50%
+      &:before
+        top: -14px
+        +context(".menu-active")
+          transform: rotate(45deg) translate(10px, 10px)
+      &:after
+        bottom: -8px
+        +context(".menu-active")
+          transform: rotate(-45deg) translate(10px, -10px)
