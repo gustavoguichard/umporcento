@@ -7,4 +7,3 @@ UmPorCento.Pages.Home =
     new UmPorCento.Views.ConstructionAlert
     for $animatedSection in $('.animated-section')
       new UmPorCento.Views.AnimatedSection {el: $animatedSection}
-    new UmPorCento.Views.ConstructionAlert

@@ -45,15 +45,6 @@ class UmPorCento.Views.MainMenu extends Backbone.View
     UmPorCento.EventDispatcher.trigger 'menu:toggle'
     false
 
-class UmPorCento.Views.ConstructionAlert extends Backbone.View
-  el: '#construction-alert'
-  initialize: ->
-    $('a[data-construction=true]').on 'click', @displayAlert
-
-  displayAlert: =>
-    @$el.clearQueue().slideDown().delay(4000).fadeOut()
-    false
-
 class UmPorCento.Views.AnimatedSection extends Backbone.View
   initialize: ->
     UmPorCento.EventDispatcher.on 'window:scrolled', @render
@@ -71,3 +62,15 @@ class UmPorCento.Views.AnimatedSection extends Backbone.View
       @$el.addClass('animate')
     else if @$el.hasClass('animate') and !passed
       @$el.removeClass('animate')
+
+################################################################################
+# TEMPORARY
+################################################################################
+class UmPorCento.Views.ConstructionAlert extends Backbone.View
+  el: '#construction-alert'
+  initialize: ->
+    $('a[data-construction=true]').on 'click', @displayAlert
+
+  displayAlert: =>
+    @$el.clearQueue().slideDown().delay(4000).fadeOut()
+    false

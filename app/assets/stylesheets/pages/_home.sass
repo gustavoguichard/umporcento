@@ -19,10 +19,15 @@
   font-size: 5em
   color: $cream
   text-align: right
+  position: relative
+  top: 40px
   &.left
     text-align: left
   @media (max-width: $screen-xs-max)
-    font-size: 3em
+    width: 100%
+    float: none
+    text-align: center !important
+    position: static
 .image-14-minutes
   width: 28%
   height: 100%
@@ -31,3 +36,6 @@
   img
     display: inline-block
     vertical-align: center
+  @media (max-width: $screen-xs-max)
+    float: none
+    width: 100%
