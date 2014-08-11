@@ -49,7 +49,7 @@ class UmPorCento.Views.AnimatedSection extends Backbone.View
   initialize: ->
     UmPorCento.EventDispatcher.on 'window:resized', @newPosition
     @model.on 'change:animate', @render
-    @model.set 'offset', @$el.data('offset')
+    @model.set 'offset', @$el.data('offset') if @$el.data('offset')
     @newPosition()
 
   newPosition: =>

@@ -1,8 +1,16 @@
 = render partial: 'slider'
-section.content-section.animated-section.section-comum
+section.content-section.animated-section.section-comum data-offset="250"
   .container
     .row
-      
+      - @comumCircle.each_with_index do |circle,index|
+        .col-sm-4.column
+          h4.comum-title.move-up.fade-in= circle[:title]
+          - classes = %w(fly-from-right \  fly-from-left)
+          ul.comum-list.list-unstyled class="#{classes[index]}"
+            - circle[:words].each do |word|
+              li.list-item= word
+
+
 section.content-section.animated-section.dark-bg.dotted-bg data-offset="250"
   .container.container-14-minutes
     .row

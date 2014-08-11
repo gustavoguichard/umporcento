@@ -1,3 +1,43 @@
+.section-comum
+  background-color: $cream
+  color: white
+  text-align: center
+  position: relative
+  +decorative-content(before, false)
+    +stick-to(top, absolute, 100px)
+    background: $cyan $dotted-bg-light
+  .column
+    height: 400px
+  .comum-title
+    font-family: $font-cursive
+    font-size: 30px
+    font-weight: bold
+    margin-bottom: 30px
+    position: relative
+    top: -60px
+    z-index: 20
+  .comum-list
+    background: rgba($cyan,.7) $dotted-bg-light
+    padding: 30px
+    border-radius: 100%
+    font-size: 20px
+    width: 340px
+    height: 340px
+    position: absolute
+    +absolute-centering(340px)
+  @media (max-width: $screen-xs-max)
+    &:before
+      height: 40px
+    .column
+      height: 360px
+    .comum-title
+      bottom: -30px
+      top: auto
+    .comum-list
+      font-size: 17px
+      padding-top: 70px
+      top: 0
+
 .container-14-minutes
   text-align: center
   font-family: $font-cursive
