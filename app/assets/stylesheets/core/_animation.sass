@@ -1,5 +1,5 @@
 // ANIMATIONS
-.fade-in, .slide-down, .move-down, .move-left, .move-up, .move-right, .fly-from-left, .fly-from-right, .rotate-cw
+.fade-in, .slide-down, .move-down, .move-left, .move-up, .move-right, .fly-from-left, .fly-from-right, .rotate-cw, .rotate-ccw, .scale-up, .scale-down
   transition: all .8s
   &.slow-transition
     transition-duration: 1.5s
@@ -7,7 +7,7 @@
     transition-duration: 2.5s
 
   +context(".animate")
-    transform: translate(0,0) rotate(0deg)
+    transform: translate(0,0) rotate(0deg) scale(1,1)
     opacity: 1
 
 .animate .delayed-transition
@@ -42,3 +42,12 @@
 
 .rotate-cw
   transform: rotate(-360deg)
+
+.rotate-ccw
+  transform: rotate(360deg)
+
+.scale-up
+  transform: scale(.8,.8)
+
+.scale-down
+  transform: scale(1.2,1.2)

@@ -2,6 +2,10 @@
 $sprites-layout: vertical
 @import "sprites/*.png"
 
+*
+  box-shadow: none
+  outline: none
+
 .dotted-bg
   background: image-url("dotted-bg.png") repeat center fixed
 
@@ -13,5 +17,17 @@ $sprites-layout: vertical
   transition: all .3s
   +context(".menu-active")
     transition: all .6s
-    filter: blur(2px) brightness(.6)
-    transform: translate(200px, 0)
+    filter: blur(3px)// brightness(.6)
+    transform: translate(150px, 0)
+
+#construction-alert
+  position: fixed
+  top: 10px
+  z-index: 9000
+  left: 50%
+  margin-left: -281px
+  display: none
+  @media (max-width: $screen-xs-max)
+    left: 10px
+    right: 10px
+    margin-left: 0

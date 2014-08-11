@@ -19,6 +19,7 @@ UmPorCento.App =
   init: ->
     new UmPorCento.Views.WindowControl
     new UmPorCento.Views.MainMenu
+    new UmPorCento.Views.ConstructionAlert
 
 $ ->
   action =  $('#init-js').data('action')
