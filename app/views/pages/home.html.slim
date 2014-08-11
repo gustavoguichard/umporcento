@@ -7,3 +7,19 @@
       h4.slider-caption.caption-2== slide[:caption_2]
       .slider-bg-img style="background-image: url(#{image_path(slide[:url])});"
   ul.cycle-pager.hidden-xs
+
+section.content-section.animated-section.dark-bg.dotted-bg data-offset="250"
+  .container.container-14-minutes
+    .row
+      h2.heading-14-minutes.fly-from-left.fade-in 14 minutos
+      .image-14-minutes
+        = image_tag "clock.png", class: "img-responsive rotate-cw fade-in slowest-transition"
+      h2.heading-14-minutes.left.fly-from-right.fade-in.slow-transition 24 segundos
+    .row.fade-in.move-up
+      h3 Este é o tempo exato de apenas 1% do seu dia.
+      h3.highlight Dedique ao próximo, a você mesmo!
+    .row.fade-in.move-up.delayed-transition
+      p.paragraph-14-minutes
+        | Medite. Relaxe. Respire profundamente.
+        br/
+        | Deixe o turbilhão do mundo passar. Deixe a brisa leve dos ventos te inspirar.

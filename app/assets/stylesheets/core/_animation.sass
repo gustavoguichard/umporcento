@@ -1,0 +1,44 @@
+// ANIMATIONS
+.fade-in, .slide-down, .move-down, .move-left, .move-up, .move-right, .fly-from-left, .fly-from-right, .rotate-cw
+  transition: all .8s
+  &.slow-transition
+    transition-duration: 1.5s
+  &.slowest-transition
+    transition-duration: 2.5s
+
+  +context(".animate")
+    transform: translate(0,0) rotate(0deg)
+    opacity: 1
+
+.animate .delayed-transition
+  transition-delay: 1s
+
+.fade-in
+  opacity: 0
+
+.move-down
+  transform: translate(0,-100%)
+
+.move-up
+  transform: translate(0,100%)
+
+.move-right
+  transform: translate(-100%,0)
+
+.move-left
+  transform: translate(100%,0)
+
+.slide-down
+  overflow: hidden
+  max-height: 0
+  +context(".animate")
+    max-height: 600px
+
+.fly-from-left
+  transform: translate(-100px,0)
+
+.fly-from-right
+  transform: translate(100px,0)
+
+.rotate-cw
+  transform: rotate(-360deg)

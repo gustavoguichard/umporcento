@@ -6,6 +6,7 @@ class UmPorCento.Views.WindowControl extends Backbone.View
   el: window
   events:
     'resize': 'resizedWindow'
+    'scroll': 'docScrolled'
   initialize: ->
     UmPorCento.EventDispatcher.on 'menu:toggle', @toggleMenu
     document.addEventListener @getVisibilityByBrowser(), @changedVisibility
@@ -28,6 +29,9 @@ class UmPorCento.Views.WindowControl extends Backbone.View
   resizedWindow: =>
     UmPorCento.EventDispatcher.trigger 'window:resized', {width: @$el.width(), height: @$el.height()}
 
+  docScrolled: =>
+    UmPorCento.EventDispatcher.trigger 'window:scrolled', @$el.scrollTop()
+
   changedVisibility: (e)=>
     UmPorCento.EventDispatcher.trigger 'window:visibilitychanged', e.target.visibilityState
 
@@ -49,3 +53,21 @@ class UmPorCento.Views.ConstructionAlert extends Backbone.View
   displayAlert: =>
     @$el.clearQueue().slideDown().delay(4000).fadeOut()
     false
+
+class UmPorCento.Views.AnimatedSection extends Backbone.View
+  initialize: ->
+    UmPorCento.EventDispatcher.on 'window:scrolled', @render
+    UmPorCento.EventDispatcher.on 'window:resized', @setPosition
+    @adjust = @$el.data('offset')
+    @setPosition()
+    @render()
+
+  setPosition: =>
+    @offset = @$el.offset().top - @adjust
+
+  render: (top)=>
+    passed = top >= @offset
+    if !@$el.hasClass('animate') and passed
+      @$el.addClass('animate')
+    else if @$el.hasClass('animate') and !passed
+      @$el.removeClass('animate')
