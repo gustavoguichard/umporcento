@@ -20,6 +20,8 @@
     padding: 10px 40px 10px 20px
     z-index: 20
     transition: all 1s
+    @media (max-width: $screen-xs-max)
+      padding-right: 20px
     +context(".js")
       transform: translate(700px, 0)
     &.caption-1
