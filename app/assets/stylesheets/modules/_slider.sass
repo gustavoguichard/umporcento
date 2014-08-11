@@ -4,6 +4,10 @@
   font-family: $font-cursive
   font-size: 24px
   overflow: hidden
+  .slide-cover
+    background: image-url("dotted-bg.png") repeat fixed
+    +expand-to-fit
+    z-index: 110
   .slide, .slider-bg-img
     width: 100%
     height: 100%
@@ -43,7 +47,7 @@
     position: absolute
     bottom: 20px
     left: 10px
-    z-index: 110
+    z-index: 120
     list-style: none
     line-height: 1.2em
     font-weight: bold

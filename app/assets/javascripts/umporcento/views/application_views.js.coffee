@@ -47,21 +47,16 @@ class UmPorCento.Views.MainMenu extends Backbone.View
 
 class UmPorCento.Views.AnimatedSection extends Backbone.View
   initialize: ->
-    UmPorCento.EventDispatcher.on 'window:scrolled', @render
-    UmPorCento.EventDispatcher.on 'window:resized', @setPosition
-    @adjust = @$el.data('offset')
-    @setPosition()
-    @render()
+    UmPorCento.EventDispatcher.on 'window:resized', @newPosition
+    @model.on 'change:animate', @render
+    @model.set 'offset', @$el.data('offset')
+    @newPosition()
 
-  setPosition: =>
-    @offset = @$el.offset().top - @adjust
+  newPosition: =>
+    @model.set 'activatePosition', @$el.offset().top
 
-  render: (top)=>
-    passed = top >= @offset
-    if !@$el.hasClass('animate') and passed
-      @$el.addClass('animate')
-    else if @$el.hasClass('animate') and !passed
-      @$el.removeClass('animate')
+  render: =>
+    if @model.get('animate') then @$el.addClass('animate') else @$el.removeClass('animate')
 
 ################################################################################
 # TEMPORARY

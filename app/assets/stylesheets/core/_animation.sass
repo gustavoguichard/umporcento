@@ -7,7 +7,7 @@
     transition-duration: 2.5s
 
   +context(".animate")
-    transform: translate(0,0) rotate(0deg) scale(1,1)
+    transform: translate(0,0) rotate(0deg) scale(1)
     opacity: 1
 
 .animate .delayed-transition
@@ -47,7 +47,19 @@
   transform: rotate(360deg)
 
 .scale-up
-  transform: scale(.8,.8)
+  transform: scale(.8)
 
 .scale-down
-  transform: scale(1.2,1.2)
+  transform: scale(1.2)
+
+.kenburns
+  animation: kenburns 120s infinite linear
+  transform-origin: 80% 20%
+
+@keyframes kenburns
+  0%
+    transform: scale(1) rotate(0deg)
+  50%
+    transform: scale(1.4) rotate(0.3deg)
+  100%
+    transform: scale(1) rotate(0deg)
