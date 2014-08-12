@@ -16,4 +16,4 @@ class UmPorCento.Models.AnimatedSection extends Backbone.Model
     @set 'animate', @checkActivation()
 
   checkActivation: =>
-    @get('scrollTop') >= (@get('activatePosition') - @get('offset'))
+    @get('scrollTop') >= (@get('activatePosition') + @get('offset'))

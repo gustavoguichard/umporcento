@@ -28,10 +28,15 @@ class UmPorCento.Views.WindowControl extends Backbone.View
     @body.toggleClass 'menu-active'
 
   resizedWindow: =>
-    UmPorCento.EventDispatcher.trigger 'window:resized', {width: @$el.width(), height: @$el.height()}
+    @height = @$el.height()
+    @width = @$el.width()
+    UmPorCento.EventDispatcher.trigger 'window:resized', {width: @width, height: @height}
 
   docScrolled: =>
-    UmPorCento.EventDispatcher.trigger 'window:scrolled', @$el.scrollTop()
+    UmPorCento.EventDispatcher.trigger 'window:scrolled', @lastPixel()
+
+  lastPixel: =>
+    @$el.scrollTop() + @height
 
   changedVisibility: (event)=>
     UmPorCento.EventDispatcher.trigger 'window:visibilitychanged', event.target.visibilityState
