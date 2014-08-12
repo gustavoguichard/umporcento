@@ -6,7 +6,7 @@ section.content-section.section-comum
         .col-sm-4.column
           .animated-section data-offset="0"
             h4.comum-title.move-up.fade-in= circle[:title]
-          .animated-section data-offset="350"
+          .animated-section data-offset="350" data-offset-mobile="0"
             - classes = %w(fly-from-right \  fly-from-left)
             ul.comum-list.list-unstyled class="#{classes[index]}"
               - circle[:words].each do |word|
