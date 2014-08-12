@@ -57,32 +57,27 @@
         text-decoration: none
   .slider-pager-item
     position: relative
-    &:before, &:after, a
+    &:before, a
       transition: all .5s
       cursor: pointer
-    &:before, &:after
+    &:before
       content: ""
       display: block
+      border: 2px solid transparent
       border-radius: 50%
       position: absolute
-    &:after
-      width: 8px
-      height: 8px
-      top: 10px
-      left: -20px
-      background: white
-    &:before
-      border: 2px solid transparent
       width: 22px
       height: 22px
       left: -27px
       top: 3px
+      background: white
+      transform: scale(.35)
     &:hover, &.cycle-pager-active
-      &:after
-        background: transparent
       &:before
         border-color: white
+        background: transparent
+        transform: scale(1)
       a
         color: white
-    &:hover:after
+    &:hover:before
       background: white
