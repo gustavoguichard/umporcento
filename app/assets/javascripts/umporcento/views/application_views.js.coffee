@@ -56,13 +56,13 @@ class UmPorCento.Views.MainMenu extends Backbone.View
 
 class UmPorCento.Views.AnimatedSection extends Backbone.View
   initialize: ->
-    UmPorCento.EventDispatcher.on 'window:resized', @newPosition
+    UmPorCento.EventDispatcher.on 'window:resized', @newWindowSize
     @model.on 'change:animate', @render
     @model.set 'offset', @$el.data('offset') if @$el.data('offset')
 
-  newPosition: =>
+  newWindowSize: (size)=>
     @model.set 'activatePosition', @$el.offset().top
-    if @$el.data('offset-mobile')?
+    if @$el.data('offset-mobile')? and size.width <= 768
       @model.set 'offset', @$el.data('offset-mobile')
     else
       @model.set 'offset', @$el.data('offset') if @$el.data('offset')
