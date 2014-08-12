@@ -10,6 +10,7 @@ class UmPorCento.Views.WindowControl extends Backbone.View
   initialize: ->
     UmPorCento.EventDispatcher.on 'menu:toggle', @toggleMenu
     document.addEventListener @getVisibilityByBrowser(), @changedVisibility
+    $('.main-content').on 'click', @closeMenu
     @body = $('body')
     @resizedWindow()
 
@@ -32,8 +33,12 @@ class UmPorCento.Views.WindowControl extends Backbone.View
   docScrolled: =>
     UmPorCento.EventDispatcher.trigger 'window:scrolled', @$el.scrollTop()
 
-  changedVisibility: (e)=>
-    UmPorCento.EventDispatcher.trigger 'window:visibilitychanged', e.target.visibilityState
+  changedVisibility: (event)=>
+    UmPorCento.EventDispatcher.trigger 'window:visibilitychanged', event.target.visibilityState
+
+  closeMenu: =>
+    UmPorCento.EventDispatcher.trigger 'menu:toggle' if @body.hasClass('menu-active')
+    false
 
 class UmPorCento.Views.MainMenu extends Backbone.View
   el: '#main-menu'
