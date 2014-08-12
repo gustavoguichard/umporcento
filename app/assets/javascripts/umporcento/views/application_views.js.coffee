@@ -38,7 +38,6 @@ class UmPorCento.Views.WindowControl extends Backbone.View
 
   closeMenu: =>
     UmPorCento.EventDispatcher.trigger 'menu:toggle' if @body.hasClass('menu-active')
-    false
 
 class UmPorCento.Views.MainMenu extends Backbone.View
   el: '#main-menu'
