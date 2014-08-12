@@ -7,7 +7,7 @@
     +stick-to(top, absolute, 100px)
     background: $cyan $dotted-bg-light
   .column
-    height: 400px
+    height: 440px
   .comum-title
     font-family: $font-cursive
     font-size: 30px
@@ -25,6 +25,14 @@
     height: 340px
     position: absolute
     +absolute-centering(340px)
+  .comum-link
+    font-family: $font-cursive
+    font-size: 30px
+    +decorative-content
+      +sprite-replace("comum-underline")
+      margin-left: -15px
+    &:hover
+      text-decoration: none
   @media (max-width: $screen-xs-max)
     &:before
       height: 40px

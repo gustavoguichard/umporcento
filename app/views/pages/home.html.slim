@@ -9,6 +9,8 @@ section.content-section.animated-section.section-comum data-offset="250"
           ul.comum-list.list-unstyled class="#{classes[index]}"
             - circle[:words].each do |word|
               li.list-item= word
+    .row
+      = link_to "Comum.cc", "http://comum.cc/", class: "comum-link", target: :blank
 
 
 section.content-section.animated-section.dark-bg.dotted-bg data-offset="250"
