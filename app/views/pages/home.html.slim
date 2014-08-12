@@ -1,30 +1,33 @@
 = render partial: 'slider'
-section.content-section.animated-section.section-comum data-offset="250"
+section.content-section.section-comum
   .container
     .row
       - @comumCircle.each_with_index do |circle,index|
         .col-sm-4.column
-          h4.comum-title.move-up.fade-in= circle[:title]
-          - classes = %w(fly-from-right \  fly-from-left)
-          ul.comum-list.list-unstyled class="#{classes[index]}"
-            - circle[:words].each do |word|
-              li.list-item= word
+          .animated-section data-offset="0"
+            h4.comum-title.move-up.fade-in= circle[:title]
+          .animated-section data-offset="350"
+            - classes = %w(fly-from-right \  fly-from-left)
+            ul.comum-list.list-unstyled class="#{classes[index]}"
+              - circle[:words].each do |word|
+                li.list-item= word
     .row
       = link_to "Comum.cc", "http://comum.cc/", class: "comum-link", target: :blank
 
 
-section.content-section.animated-section.dark-bg.dotted-bg data-offset="250"
+section.content-section.dark-bg.dotted-bg
   .container.container-14-minutes
-    .row
+    .row.animated-section data-offset="250"
       h2.heading-14-minutes.fly-from-left.fade-in 14 minutos
       .image-14-minutes
         = image_tag "clock.png", class: "img-responsive rotate-ccw fade-in"
       h2.heading-14-minutes.left.fly-from-right.fade-in.slow-transition 24 segundos
-    .row.fade-in.move-up.slow-transition
-      h3 Este é o tempo exato de apenas 1% do seu dia.
-      h3.highlight Dedique ao próximo, a você mesmo!
-    .row.fade-in.move-up.delayed-transition.slowest-transition
-      p.paragraph-14-minutes
-        | Medite. Relaxe. Respire profundamente.
-        br/
-        | Deixe o turbilhão do mundo passar. Deixe a brisa leve dos ventos te inspirar.
+    .animated-section data-offset="150"
+      .row.fade-in.move-up.slow-transition
+        h3 Este é o tempo exato de apenas 1% do seu dia.
+        h3.highlight Dedique ao próximo, a você mesmo!
+      .row.fade-in.move-up.delayed-transition.slowest-transition
+        p.paragraph-14-minutes
+          | Medite. Relaxe. Respire profundamente.
+          br/
+          | Deixe o turbilhão do mundo passar. Deixe a brisa leve dos ventos te inspirar.
