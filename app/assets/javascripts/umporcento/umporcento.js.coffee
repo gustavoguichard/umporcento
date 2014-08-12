@@ -17,12 +17,12 @@ UmPorCento.EventDispatcher = _.extend {}, Backbone.Events
 
 UmPorCento.App = 
   init: ->
-    new UmPorCento.Views.WindowControl
     new UmPorCento.Views.MainMenu
     new UmPorCento.Views.ConstructionAlert
     for $animatedSection in $('.animated-section')
       model = new UmPorCento.Models.AnimatedSection
       new UmPorCento.Views.AnimatedSection {el: $animatedSection, model: model}
+    new UmPorCento.Views.WindowControl
 
 $ ->
   action =  $('#init-js').data('action')
