@@ -1,5 +1,5 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: monitorinstitute-game-dev
+  database: umporcento-dev
   host: localhost
