@@ -17,14 +17,17 @@ class PagesController < ApplicationController
 
   def about
     @team = [
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
+      {picture: "people/ale.jpg", role: "Pássaro", name: "Ale", surname: "Moesh"},
+      {picture: "people/anderson.jpg", role: "Pássaro", name: "Anderson", surname: "Mirapalheta"},
+      {picture: "people/angel.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/carmen.jpg", role: "Pássaro", name: "Carmen", surname: "Barbosa"},
+      {picture: "people/diego.jpg", role: "Pássaro", name: "Diego", surname: "Marchi"},
+      {picture: "people/emilia.jpg", role: "Pássaro", name: "Emília", surname: "Adachi"},
+      {picture: "people/lu.jpg", role: "Pássaro", name: "Lu", surname: "Xerxenevsky"},
+      {picture: "people/luiza.jpg", role: "Pássaro", name: "Luiza", surname: "Prigol"},
+      {picture: "people/mari.jpg", role: "Pássaro", name: "Mari", surname: "Fraga"},
+      {picture: "people/matthias.jpg", role: "Pássaro", name: "Matthias", surname: "Schneider"},
+      {picture: "people/vanessa.jpg", role: "Pássaro", name: "Vanessa", surname: "Kukul"}
     ]
   end
 
