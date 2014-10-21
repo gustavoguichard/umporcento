@@ -19,3 +19,15 @@
       .row
         .col-md-8.col-md-offset-2
           p "O que há em uma estrela? Nós mesmos! Todos os elementos do nosso corpo e do planeta,      estiveram nas entranhas de uma estrela. Entāo, afinal, quem somos? Somos o povo das            estrelas..." Ernesto Cardenal
+      .row
+        .col-md-12
+          - @team.shuffle.each do |person|
+            - if [*1..100].sample < 15
+              .teammate
+            .teammate
+              = image_tag person[:picture]
+              .teammate-info
+                .role= person[:role]
+                p.fullname
+                  strong.name= person[:name].upcase
+                  strong.surname= person[:surname].upcase
