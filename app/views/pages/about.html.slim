@@ -23,7 +23,7 @@
         .col-md-12.team-profiles
           - @team.shuffle.each do |person|
             - if [*1..100].sample < 15
-              .teammate
+              .teammate.blank-teammate
             .teammate
               = image_tag person[:picture]
               .teammate-info
