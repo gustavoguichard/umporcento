@@ -1,46 +1,4 @@
 .about-page
-  &.background-wrap
-    background: $cream image-url("about-bg.jpg") no-repeat top fixed
-    background-size: cover
-  .inner-page-header
-    background: rgba($cyan, .7)
-  .text-content
-    background: rgba(white, .85)
 
-
-.inner-page-header
-  padding: 1em 10px
-  font-family: $font-cursive
-  .page-title 
-    font-size: 60px
-    float: right
-    color: white
-    top: -20px
-    +decorative-content
-      +sprite-replace("page-title-underline")
-      +absolute-centering(sprites-sprite-width("page-title-underline"))
-    .contour-letters
-      color: $cyan
-      text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white, -1px 1px 0 white
-      font-style: normal
-      &.question-mark
-        font-size: 1.2em
-        position: relative
-        top: 8px
-        transform: rotate(3deg)
-
-.text-content
-  letter-spacing: 0.01rem
-  font-weight: 400
-  font-style: normal
-  font-size: 22px
-  line-height: 1.5
-  p
-    margin-bottom: 30px
-  .blue-highlight, .dark-highlight
-    font-family: $font-cursive
-    text-align: center
-    font-size: 1.4em
-    line-height: 1.1em
-  .blue-highlight
-    color: $cyan
+.the-team
+  text-align: center
