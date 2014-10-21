@@ -20,10 +20,10 @@ class PagesController < ApplicationController
       {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
       {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
       {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
-      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
       {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
     ]
   end
