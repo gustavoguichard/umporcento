@@ -16,6 +16,16 @@ class PagesController < ApplicationController
   end
 
   def about
+    @team = [
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
+      {picture: "people/person.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"}
+    ]
   end
 
 end
