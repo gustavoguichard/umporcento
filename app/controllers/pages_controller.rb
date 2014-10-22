@@ -20,7 +20,7 @@ class PagesController < ApplicationController
       {picture: "people/ale.png", role: "Pássaro", name: "Ale", surname: "Moesh"},
       {picture: "people/anderson.png", role: "Pássaro", name: "Anderson", surname: "Mirapalheta"},
       {picture: "people/angel.png", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/carmen.png", role: "Pássaro", name: "Carmen", surname: "Barbosa"},
+      {picture: "people/carmem.png", role: "Pássaro", name: "Carmem", surname: "Barbosa"},
       {picture: "people/dario.png", role: "Pássaro", name: "Dário", surname: "Rushel"},
       {picture: "people/diego.png", role: "Pássaro", name: "Diego", surname: "Marchi"},
       {picture: "people/emilia.png", role: "Pássaro", name: "Emília", surname: "Adachi"},
