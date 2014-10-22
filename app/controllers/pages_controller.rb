@@ -17,17 +17,18 @@ class PagesController < ApplicationController
 
   def about
     @team = [
-      {picture: "people/ale.jpg", role: "Pássaro", name: "Ale", surname: "Moesh"},
-      {picture: "people/anderson.jpg", role: "Pássaro", name: "Anderson", surname: "Mirapalheta"},
-      {picture: "people/angel.jpg", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
-      {picture: "people/carmen.jpg", role: "Pássaro", name: "Carmen", surname: "Barbosa"},
-      {picture: "people/diego.jpg", role: "Pássaro", name: "Diego", surname: "Marchi"},
-      {picture: "people/emilia.jpg", role: "Pássaro", name: "Emília", surname: "Adachi"},
-      {picture: "people/lu.jpg", role: "Pássaro", name: "Lu", surname: "Xerxenevsky"},
-      {picture: "people/luiza.jpg", role: "Pássaro", name: "Luiza", surname: "Prigol"},
-      {picture: "people/mari.jpg", role: "Pássaro", name: "Mari", surname: "Fraga"},
-      {picture: "people/matthias.jpg", role: "Pássaro", name: "Matthias", surname: "Schneider"},
-      {picture: "people/vanessa.jpg", role: "Pássaro", name: "Vanessa", surname: "Kukul"}
+      {picture: "people/ale.png", role: "Pássaro", name: "Ale", surname: "Moesh"},
+      {picture: "people/anderson.png", role: "Pássaro", name: "Anderson", surname: "Mirapalheta"},
+      {picture: "people/angel.png", role: "Fundador", name: "Angel", surname: "Mirapalheta"},
+      {picture: "people/carmen.png", role: "Pássaro", name: "Carmen", surname: "Barbosa"},
+      {picture: "people/dario.png", role: "Pássaro", name: "Dário", surname: "Rushel"},
+      {picture: "people/diego.png", role: "Pássaro", name: "Diego", surname: "Marchi"},
+      {picture: "people/emilia.png", role: "Pássaro", name: "Emília", surname: "Adachi"},
+      {picture: "people/lu.png", role: "Pássaro", name: "Lu", surname: "Xerxenevsky"},
+      {picture: "people/luiza.png", role: "Pássaro", name: "Luiza", surname: "Prigol"},
+      {picture: "people/mari.png", role: "Pássaro", name: "Mari", surname: "Fraga"},
+      {picture: "people/matthias.png", role: "Pássaro", name: "Matthias", surname: "Schneider"},
+      {picture: "people/vanessa.png", role: "Pássaro", name: "Vanessa", surname: "Kukul"}
     ]
   end
 
